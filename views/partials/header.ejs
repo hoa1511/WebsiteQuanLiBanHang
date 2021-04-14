@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Pacifico&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Comfortaa:wght@600&family=Pacifico&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Comfortaa:wght@600&family=Pacifico&family=Quicksand:wght@300&family=Sacramento&display=swap" rel="stylesheet"
+    <!--<link rel="stylesheet" href="/assets/css/custom.css">-->
+    <title><%= title %></title>
+</head>
+<style>
+    .table-wrapper {
+        margin-top: 50px;
+    }
+
+    .product-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .add-product-form {
+        margin-top: 50px;
+    }
+    .headerstyle{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: xx-large;
+    }
+    .stylebutton{
+        background-color:pink;
+    }
+    .cha{
+        text-align: center;
+    }
+    .navbarfont{
+       font-family: 'Pacifico', cursive;
+       font-size:40px;
+       color:#E2A9F3;
+    }
+    .Brand{
+     
+        font-size: 50px;
+        font-family: 'Barlow Condensed', sans-serif;
+    }
+    .deletrow a{
+        text-decoration: none;
+        
+    }
+    .red{
+        color:#E2A9F3;
+    }
+    .green{
+        color:#FF99CC;
+    }
+    .tableeff{
+        color:whitesmoke;
+        background-color: #9F81F7;
+    }
+    .deletebuttoneff{
+        background-color: #F5A9BC;
+        color:whitesmoke;
+        font-weight: bold;
+    }
+    .editbuttoneff{
+        background-color: #04B4AE;
+        color: whitesmoke;
+        font-weight: bold;
+    }
+    .fontstyle{
+        font-family: 'Comfortaa', cursive;
+    }
+    .fontstyle1{
+        font-family: 'Comfortaa', cursive;
+        font-size: 30px;
+        color:#8181F7
+    }
+    .numeff{
+        color:#8000FF;
+    }
+    .father{
+        text-align:center;
+    }
+    .son{
+        display: inline-block;
+    }
+    .middle{
+        margin-left: 500px;
+    }
+</style>
+<body>
+<div class="page-wrapper deletrow">
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <div class="navbar-brand mb-0 h1">
+            <h1 class='navbarfont'>
+                FLower Shop
+            </h1>  
+        </div>
+        <div>
+            <p class="navbar  justify-content-center Brand red"> Trang Quản Lí Bán Hàng</p>
+        </div>
+        <div>
+            <form class="navbar navbar-light bg-light justify-content-center" action="/home" method="get">
+                <input class="justify-content-center" type="text" name="search" id="search">
+                <br>
+                <input class="btn" style="color: #00CCCC;font-weight: bold;font-family: 'Barlow Condensed'" type="submit" value="Tìm Kiếm">
+            </form>
+        </div>
+        <a class="navbar navbar-light bg-light justify-content-center" style="font-family: 'Barlow Condensed', sans-serif;color: #8000FF;font-weight: bold;" href="/home" title="Trang Chủ">Trang chủ</a>
+        <a class="navbar navbar-light bg-light justify-content-center" style="font-family: 'Barlow Condensed', sans-serif;color: #8000FF;font-weight: bold;" href="/add" title="Thêm Mặt Hàng">Thêm mặt hàng</a>
+        <a class="navbar navbar-light bg-light justify-content-center" style="font-family: 'Barlow Condensed', sans-serif;color: #8000FF;font-weight: bold;" href="/" title="Đăng Xuất">Đăng Xuất</a>
+    </nav>

@@ -1,0 +1,39 @@
+<%- include ('partials/header.ejs'); -%>
+    <div class="table-wrapper">
+        <% if (myproduct_tb.length > 0) { %>
+            <table class="table table-hovered">
+                <thead class="tableeff">
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên Mặt Hàng</th>
+                        <th>Giá</th>
+                        <th>Tình Trạng</th>
+                        <th>Số Lượng</th>
+                        <th>Hình ảnh</th>
+                        <th> Chỉnh Sửa</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <% myproduct_tb.forEach((product, index) => { %>
+                        <tr>
+                            <th scope="row" class ='numeff'><%= product.STT %></th>
+                            <td class ='fontstyle'><%= product.Name%></td>
+                            <td class ='fontstyle'><%= product.Price %></td>
+                            <td class ='fontstyle'><%= product.Status %></td>
+                            <td class ='fontstyle'><%= product.SoLuong %></td>
+                            <td class ='fontstyle'><img src="/assets/img/<%= product.Picture %>" class="rounded-circle product-img" alt=""></td>
+                            <td>
+                                <a href="/edit/<%= product.STT %>" target="_blank" rel="noopener" class="btn btn-sm editbuttoneff">Sửa</a>
+                                <a href="/delete/<%= product.STT %>" class="btn btn-sm deletebuttoneff">Xóa</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p class="text-center">Hiện chưa có sản phẩm nào <a href="/add" >Thêm sản phẩm</a></p>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>
